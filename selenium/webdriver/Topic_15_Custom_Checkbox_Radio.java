@@ -37,6 +37,23 @@ public class Topic_15_Custom_Checkbox_Radio {
         Assert.assertTrue(driver.findElement(termCheckbox).isSelected());
     }
 
+    @Test
+    public void TC_02_Google_Form() throws InterruptedException {
+        driver.get("https://docs.google.com/forms/d/e/1FAIpQLSfiypnd69zhuDkjKgqvpID9kwO29UCzeCVrGGtbNPZXQok0jA/viewform");
+
+        By canthoRadio = By.cssSelector("div[aria-label='Cần Thơ']");
+        Thread.sleep(2000);
+
+        //Click on the checkbox
+        driver.findElement(canthoRadio).click();
+        Thread.sleep(2000);
+
+        //Verify the checkbox by isDisplayed or getAttribute
+        Assert.assertTrue(driver.findElement(By.cssSelector("div[aria-label='Cần Thơ'][aria-checked='true']")).isDisplayed());
+        //Assert.assertEquals(driver.findElement(canthoRadio).getAttribute("aria-checked"), "true");
+
+    }
+
     @AfterClass
     public void afterClass(){
 
