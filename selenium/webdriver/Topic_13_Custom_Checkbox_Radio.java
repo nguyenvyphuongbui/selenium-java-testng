@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Topic_15_Custom_Checkbox_Radio {
+public class Topic_13_Custom_Checkbox_Radio {
     WebDriver driver;
 
     @BeforeClass
